@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>HoloGloves – Modélisation 3D</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" type="image/png" href="images/LogoHoloverse2.png" />
+
+<!-- Importmap Three.js -->
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.162.0/build/three.module.js",
+    "three/examples/jsm/": "https://cdn.jsdelivr.net/npm/three@0.162.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+
+<header class="top-header">
+  <a href="presentation.html" class="logo-link">
+    <img src="images/LogoHoloverse2.png" alt="HoloGloves Logo" class="logo" />
+    <span class="site-title">HoloGloves</span>
+  </a>
+
+  <nav>
+    <a href="presentation.html">Présentation</a>
+    <a href="modelisation.html">Modélisation 3D</a>
+  </nav>
+</header>
+
+<h2 style="text-align:center; margin-top:20px;">Exemple de Modélisation 3D</h2>
+
+<!-- CONTENEUR 3D -->
+<div class="model3d-container" style="width:100%; height:500px;"></div>
+
+<script type="module" src="script.js"></script>
+
+</body>
+</html>

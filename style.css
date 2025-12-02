@@ -1,14 +1,46 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+/* Header fixe */
+.top-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
-header {
-  text-align: center;
-  padding: 40px 20px;
-  font-size: 2.5rem;
-  font-weight: bold;
+/* Lien du logo et du titre */
+.logo-link {
+  display: flex;          /* pour aligner image et texte sur la même ligne */
+  align-items: center;    /* centre verticalement le texte par rapport à l'image */
+  text-decoration: none !important;  /* supprime le soulignement même si le navigateur applique un style */
+  gap: 15px;              /* espace entre l'image et le texte */
+  color: inherit;         /* texte prend la couleur du parent */
 }
+
+/* Logo */
+.logo {
+  height: 40px;
+  cursor: pointer;
+}
+
+/* Titre à côté du logo */
+.site-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  user-select: none;
+  color: #fff; /* couleur blanche */
+}
+
+/* Pour que le contenu ne soit pas caché par le header */
+body {
+  padding-top: 60px; /* même hauteur que le header */
+}
+
 
 .carousel {
   position: relative;
@@ -48,10 +80,9 @@ header {
 }
 
 .model3d-container {
-  width: 100%;
-  max-width: 800px;
-  height: 500px;
-  margin: 40px auto;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+    background-color: #000000; /* fond noir */
+    width: 100%;
+    height: 100vh; /* ou la hauteur que tu veux */
+    overflow: hidden;
+    position: relative;
 }

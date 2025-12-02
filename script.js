@@ -25,7 +25,7 @@ const camera = new THREE.PerspectiveCamera(
     0.1,
     1000
 );
-camera.position.set(0, 0, 5);
+camera.position.set(0, 0, 4);
 camera.lookAt(0, 0, 0);
 
 // Renderer
@@ -93,14 +93,14 @@ function renderHologram() {
 
   // Gauche
   camera.rotation.z = -Math.PI / 2;
-  renderer.setViewport(gap+70, halfH / 2, viewW, halfH);
+  renderer.setViewport(gap, halfH / 2, viewW, halfH);
   renderer.setScissor(gap, halfH / 2, viewW, halfH);
   renderer.setScissorTest(true);
   renderer.render(scene, camera);
 
   // Droite
   camera.rotation.z = Math.PI / 2;
-  renderer.setViewport(gap + viewW * 2-70, halfH / 2, viewW, halfH);
+  renderer.setViewport(gap + viewW * 2, halfH / 2, viewW, halfH);
   renderer.setScissor(gap + viewW * 2, halfH / 2, viewW, halfH);
   renderer.setScissorTest(true);
   renderer.render(scene, camera);
